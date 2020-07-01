@@ -31,7 +31,7 @@ if [ "$#" -eq 0 ]; then
    mac2=$(hostname | cut -c1-2)
    if [ $mac2 = tf ] ; then                         # For Theia
       machine=theia
-   elif [ $mac = f  ] ; then                        # For Jet 
+   elif [ $mac = f  ] ; then                        # For Jet
       machine=jet
    elif [ $mac = v -o $mac = m  ] ; then            # For Dell
       machine=wcoss_dell_p3
@@ -78,7 +78,7 @@ jet)                                   # For Jet
  ;;
 wcoss_dell_p3)                         # For Dell
  module purge
- . $MODULESHOME/init/bash                 
+ . $MODULESHOME/init/bash
  ;;
 wcoss)                                 # For WCOSS
  module purge
@@ -123,6 +123,6 @@ cd ..
 if [ ! -d "../exec" ] ; then
   mkdir -p ../exec
 fi
-cp install/bin/upp.x ../../exec/
+cp install/bin/upp.x ../../exec/ncep_post
 
 exit 0
